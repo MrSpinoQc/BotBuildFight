@@ -7,7 +7,7 @@ const BuildFightFunction = require("./ChannelBuild")
 const inscription = require("./inscription")
 const GameLunch = require("./gamelunch")
 var mysql = require('mysql')
-client.login('NjY0NjMyNjY1MTUyMTU5NzY0.XhZ6vg.wkB6MzEiFjyZK4xGhcuXNU1enm8')
+client.login('NjY0NjMyNjY1MTUyMTU5NzY0.XjNRGw.eM0M1PovYpd39JVRm6LebQF6940')
 
 var connection = mysql.createConnection({
     host: "localhost",
