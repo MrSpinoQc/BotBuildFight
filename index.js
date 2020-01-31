@@ -7,13 +7,14 @@ const BuildFightFunction = require("./ChannelBuild")
 const inscription = require("./inscription")
 const GameLunch = require("./gamelunch")
 var mysql = require('mysql')
-client.login('NjY0NjMyNjY1MTUyMTU5NzY0.XjNRGw.eM0M1PovYpd39JVRm6LebQF6940')
+client.login('NjY0NjMyNjY1MTUyMTU5NzY0.XjNR4g.sRswyktrogBI8Ns2AmiANhI7Zzs')
 
 var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1234",
-    database: "BuildFight"
+    host: "sql9.freemysqlhosting.net",
+    port: "3306",
+    user: "sql9320842",
+    password: "YpLIlUnrJq",
+    database: "sql9320842"
 });
 
 client.on("ready", () => { 

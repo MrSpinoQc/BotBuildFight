@@ -54,11 +54,11 @@ function BuildFightFunction(client, message, connection) {
                 }
                 if (message.content.toLowerCase() === '!join')  {
                     user = message.author.id;
-                    connection.query(`SELECT * FROM userElo WHERE userID = ${message.author.id}`,(err, result) => {
+                    connection.query(`SELECT * FROM userelo WHERE userID = ${message.author.id}`,(err, result) => {
                         if (err) throw err;
                         if(result.length === 0)
                         {   
-                            connection.query(`INSERT INTO userElo (userID, userELO) VALUES ('${message.author.id}', '200')`, err => {
+                            connection.query(`INSERT INTO userelo (userID, userELO) VALUES ('${message.author.id}', '200')`, err => {
                                 if (err) throw err;
                             });
 
@@ -126,7 +126,7 @@ function StartSolo(client, message, connection){
         buildembed(playerIn)
         message.channel.fetchMessage(msgId).then(msg => msg.edit(Build));
 
-        connection.query(`SELECT * FROM userEpic WHERE userID IN (${Player1},${Player2})`,(err, result) => {
+        connection.query(`SELECT * FROM userepic WHERE userID IN (${Player1},${Player2})`,(err, result) => {
             if(err) throw err;
 
             console.log(result)
@@ -136,7 +136,7 @@ function StartSolo(client, message, connection){
             PlayerMention2 = result[1].userID;
             console.log(PlayerName1)
             console.log(PlayerName2)
-            connection.query(`SELECT * FROM userElo WHERE userID IN (${Player1},${Player2})`,(err, result) => {
+            connection.query(`SELECT * FROM userelo WHERE userID IN (${Player1},${Player2})`,(err, result) => {
                 if(err) throw err;
                 UserElo1 = result[0].userELO
                 UserElo2 = result[1].userELO
